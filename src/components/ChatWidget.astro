@@ -1,0 +1,423 @@
+---
+const CODEX_API = "https://wa.masmoebel.es/web-chat";
+---
+
+<div id="chat-toast" class="fixed bottom-24 right-6 z-[60] hidden">
+	<div class="bg-gray-900 text-white px-4 py-3 rounded-lg shadow-lg max-w-xs">
+		<p id="chat-toast-message" class="text-sm"></p>
+	</div>
+</div>
+
+<div id="chat-widget" class="fixed bottom-6 right-6 z-50">
+	<!-- CODEX IA Label -->
+	<span id="chat-label" class="text-xs font-semibold text-[#25D366] bg-transparent px-2 py-1 rounded-full cursor-pointer hover:opacity-80 transition-opacity">CODEX AI</span>
+
+	<!-- Chat Button -->
+	<button
+		id="chat-btn"
+		class="mt-2 flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300"
+		aria-label="Abrir chat con CODEX AI"
+	>
+		<svg id="chat-icon-open" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+		</svg>
+		<svg id="chat-icon-close" class="hidden w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+		</svg>
+	</button>
+
+	<!-- Image Modal -->
+	<div id="image-modal" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center p-4">
+		<button id="modal-close" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors">
+			<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+			</svg>
+		</button>
+		<img id="modal-image" src="" alt="Imagen expandida" class="max-w-full max-h-full object-contain rounded-lg" />
+	</div>
+
+	<!-- Chat Window -->
+	<div id="chat-window" class="hidden absolute bottom-20 right-0 bg-white rounded-2xl shadow-2xl overflow-hidden" style="width: 539px; height: 658px;">
+		<!-- Header -->
+		<div class="bg-[#25D366] p-4 flex items-center gap-3">
+			<div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+				<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+					<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+				</svg>
+			</div>
+			<div>
+				<h3 class="text-white font-semibold">CODEX AI</h3>
+				<p id="chat-status" class="text-white/80 text-xs">Conectado</p>
+			</div>
+		</div>
+
+		<!-- Messages Area -->
+		<div id="chat-messages" class="h-[420px] p-4 overflow-y-auto bg-gray-50">
+			<div class="flex items-start gap-2 mb-4">
+				<div class="w-8 h-8 bg-[#25D366] rounded-full flex items-center justify-center flex-shrink-0">
+					<svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+						<path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L2 22l5.71-.97A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+					</svg>
+				</div>
+				<div class="bg-white p-3 rounded-lg rounded-tl-none shadow-sm max-w-[85%]">
+					<p class="text-sm text-gray-700">¡Hola! Soy <strong>CODEX AI</strong>. ¿En qué puedo ayudarte?</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Input Area -->
+		<div class="p-4 bg-white border-t flex items-center gap-2">
+			<button id="attach-btn" class="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300 transition-colors" aria-label="Adjuntar archivo">
+				<svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+				</svg>
+			</button>
+			<input type="file" id="file-input" class="hidden" accept="image/*,.pdf" />
+			<textarea id="chat-input" placeholder="Escribe tu mensaje..." rows="4" class="flex-1 px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl text-base focus:outline-none focus:border-[#25D366] min-h-[80px] max-h-36 resize-none overflow-y-auto"></textarea>
+			<button id="send-btn" class="flex items-center justify-center w-10 h-10 bg-[#25D366] rounded-full hover:bg-[#20bd5a] transition-colors" aria-label="Enviar mensaje">
+				<svg id="send-icon" class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+				</svg>
+				<svg id="loading-icon" class="hidden w-5 h-5 text-white animate-spin" fill="none" viewBox="0 0 24 24">
+					<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+					<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>
+
+<style>
+	@keyframes float {
+		0%, 100% { transform: translateY(0); }
+		50% { transform: translateY(-8px); }
+	}
+	#chat-widget:has(#chat-window.hidden) #chat-btn {
+		animation: float 3s ease-in-out infinite;
+	}
+	#chat-window {
+		animation: slideUp 0.3s ease-out;
+	}
+	@keyframes slideUp {
+		from { opacity: 0; transform: translateY(10px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	#chat-toast {
+		animation: toastIn 0.3s ease-out;
+	}
+	@keyframes toastIn {
+		from { opacity: 0; transform: translateY(10px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	.message-user {
+		background: #dcf8c6;
+		border-radius: 12px 12px 0 12px;
+	}
+	.message-codex {
+		background: white;
+		border-radius: 12px 12px 12px 0;
+	}
+	.img-skeleton {
+		transition: opacity 0.3s ease;
+	}
+	#image-modal {
+		animation: fadeIn 0.2s ease-out;
+	}
+	@keyframes fadeIn {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+</style>
+
+<script define:vars={{ CODEX_API }}>
+	const chatBtn = document.getElementById('chat-btn');
+	const chatWindow = document.getElementById('chat-window');
+	const chatIconOpen = document.getElementById('chat-icon-open');
+	const chatIconClose = document.getElementById('chat-icon-close');
+	const chatLabel = document.getElementById('chat-label');
+	const chatInput = document.getElementById('chat-input');
+	const sendBtn = document.getElementById('send-btn');
+	const sendIcon = document.getElementById('send-icon');
+	const loadingIcon = document.getElementById('loading-icon');
+	const attachBtn = document.getElementById('attach-btn');
+	const fileInput = document.getElementById('file-input');
+	const chatMessages = document.getElementById('chat-messages');
+	const chatStatus = document.getElementById('chat-status');
+	const toast = document.getElementById('chat-toast');
+	const toastMessage = document.getElementById('chat-toast-message');
+
+	let sessionId = 'web-' + Date.now();
+	let toastTimeout;
+	let attachedFile = null;
+
+	function showToast(message) {
+		if (toastTimeout) clearTimeout(toastTimeout);
+		toastMessage.textContent = message;
+		toast.classList.remove('hidden');
+		toastTimeout = setTimeout(() => toast.classList.add('hidden'), 3000);
+	}
+
+	function setLoading(loading) {
+		sendIcon.classList.toggle('hidden', loading);
+		loadingIcon.classList.toggle('hidden', !loading);
+		sendBtn.disabled = loading;
+	}
+
+	function scrollToBottom() {
+		chatMessages.scrollTop = chatMessages.scrollHeight;
+	}
+
+	function addMessage(text, isUser = false) {
+		const wrapper = document.createElement('div');
+		wrapper.className = 'flex items-start gap-2 mb-4' + (isUser ? ' flex-row-reverse' : '');
+
+		const avatar = document.createElement('div');
+		avatar.className = 'w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0';
+		if (isUser) {
+			avatar.className += ' bg-[#25D366]';
+			avatar.innerHTML = '<svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L2 22l5.71-.97A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>';
+		} else {
+			avatar.className += ' bg-[#25D366]';
+			avatar.innerHTML = '<svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L2 22l5.71-.97A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>';
+		}
+
+		const bubble = document.createElement('div');
+		bubble.className = 'p-3 rounded-lg shadow-sm max-w-[85%]';
+		bubble.className += isUser ? ' message-user' : ' message-codex';
+		const safeText = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+		bubble.innerHTML = `<p class="text-sm text-gray-700 whitespace-pre-wrap">${safeText.replace(/\n/g, '<br>')}</p>`;
+
+		wrapper.appendChild(avatar);
+		wrapper.appendChild(bubble);
+		chatMessages.appendChild(wrapper);
+		scrollToBottom();
+	}
+
+	function addImageMessage(imgUrl, isUser = false, caption = '') {
+		const wrapper = document.createElement('div');
+		wrapper.className = 'flex items-start gap-2 mb-4' + (isUser ? ' flex-row-reverse' : '');
+
+		const avatar = document.createElement('div');
+		avatar.className = 'w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0';
+		if (isUser) {
+			avatar.className += ' bg-[#25D366]';
+			avatar.innerHTML = '<svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L2 22l5.71-.97A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>';
+		} else {
+			avatar.className += ' bg-[#25D366]';
+			avatar.innerHTML = '<svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L2 22l5.71-.97A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>';
+		}
+
+		const imgContainer = document.createElement('div');
+		imgContainer.className = 'relative rounded-lg overflow-hidden shadow-sm max-w-[85%]' + (isUser ? ' message-user' : ' message-codex');
+
+		// Skeleton loader
+		const skeleton = document.createElement('div');
+		skeleton.className = 'img-skeleton w-64 h-48 bg-gray-200 animate-pulse flex items-center justify-center';
+		skeleton.innerHTML = '<svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>';
+
+		// Actual image
+		const img = document.createElement('img');
+		img.className = 'w-full h-auto object-cover cursor-pointer hover:opacity-90 transition-opacity';
+		img.src = imgUrl;
+		img.alt = caption || 'Imagen';
+		img.loading = 'lazy';
+
+		img.onload = () => {
+			skeleton.remove();
+		};
+		img.onerror = () => {
+			skeleton.remove();
+			imgContainer.innerHTML = `<div class="w-64 h-48 bg-gray-100 flex items-center justify-center text-gray-500 text-sm">
+				<svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+				Error al cargar imagen
+			</div>`;
+		};
+
+		// Click to expand
+		img.addEventListener('click', () => openImageModal(imgUrl));
+
+		imgContainer.appendChild(skeleton);
+		imgContainer.appendChild(img);
+
+		// Caption if exists
+		if (caption) {
+			const captionEl = document.createElement('p');
+			captionEl.className = 'p-2 text-xs text-gray-600 bg-white';
+			captionEl.textContent = caption;
+			imgContainer.appendChild(captionEl);
+		}
+
+		wrapper.appendChild(avatar);
+		wrapper.appendChild(imgContainer);
+		chatMessages.appendChild(wrapper);
+		scrollToBottom();
+	}
+
+	function openImageModal(imgUrl) {
+		const modal = document.getElementById('image-modal');
+		const modalImg = document.getElementById('modal-image');
+		modalImg.src = imgUrl;
+		modal.classList.remove('hidden');
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeImageModal() {
+		const modal = document.getElementById('image-modal');
+		modal.classList.add('hidden');
+		document.body.style.overflow = '';
+	}
+
+	async function sendToCodex(message, file = null) {
+		setLoading(true);
+		chatStatus.textContent = 'Escribiendo...';
+
+		try {
+			let data;
+			if (file) {
+				// Enviar como FormData con archivo
+				const formData = new FormData();
+				formData.append('message', message);
+				formData.append('session_id', sessionId);
+				formData.append('file', file);
+				const response = await fetch(CODEX_API, {
+					method: 'POST',
+					body: formData
+				});
+				if (!response.ok) throw new Error('HTTP ' + response.status);
+				data = await response.json();
+			} else {
+				// Enviar como JSON sin archivo
+				const response = await fetch(CODEX_API, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ message, session_id: sessionId })
+				});
+				if (!response.ok) throw new Error('HTTP ' + response.status);
+				data = await response.json();
+			}
+			addMessage(data.response || 'Respuesta vacía');
+			if (data.images && data.images.length > 0) {
+				data.images.forEach(imgUrl => {
+					addImageMessage(imgUrl);
+				});
+			}
+		} catch (err) {
+			console.error('[CODEX] Error:', err);
+			showToast('Error de conexión con CODEX');
+			addMessage('Lo siento, no pude conectar con el asistente. Inténtalo de nuevo.');
+		} finally {
+			setLoading(false);
+			chatStatus.textContent = 'Conectado';
+		}
+	}
+
+	chatBtn?.addEventListener('click', () => {
+		chatWindow?.classList.toggle('hidden');
+		chatIconOpen?.classList.toggle('hidden');
+		chatIconClose?.classList.toggle('hidden');
+		chatLabel?.classList.toggle('hidden');
+	});
+
+	function handleSend() {
+		const message = chatInput.value.trim();
+		if (!message && !attachedFile) return;
+
+		// Remover preview si existe
+		const preview = document.getElementById('file-preview');
+		if (preview) preview.remove();
+
+		if (message) addMessage(message, true);
+		if (attachedFile) {
+			const fileName = attachedFile.name;
+			addMessage(`📎 ${fileName}`, true);
+		}
+		const fileToSend = attachedFile;
+		chatInput.value = '';
+		attachedFile = null;
+		sendToCodex(message || 'Adjunto un archivo', fileToSend);
+	}
+
+	chatInput?.addEventListener('keydown', (e) => {
+		if (e.key === 'Enter' && !e.shiftKey) {
+			e.preventDefault();
+			handleSend();
+			setTimeout(() => chatInput?.focus(), 10);
+		}
+	});
+
+	// Prevenir que otros elementos roben el foco del textarea
+	document.addEventListener('click', (e) => {
+		if (chatWindow && !chatWindow.classList.contains('hidden')) {
+			const target = e.target;
+			// Si el click no fue en el textarea ni en el botón de enviar, refocus
+			if (target !== chatInput && !sendBtn?.contains(target) && !attachBtn?.contains(target)) {
+				chatInput?.focus();
+			}
+		}
+	});
+
+	sendBtn?.addEventListener('click', handleSend);
+
+	attachBtn?.addEventListener('click', () => fileInput?.click());
+
+	document.getElementById('modal-close')?.addEventListener('click', closeImageModal);
+	document.getElementById('image-modal')?.addEventListener('click', (e) => {
+		if (e.target.id === 'image-modal') closeImageModal();
+	});
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') closeImageModal();
+	});
+
+	fileInput?.addEventListener('change', async () => {
+		const file = fileInput.files?.[0];
+		if (!file) return;
+		if (file.size > 10 * 1024 * 1024) {
+			showToast('El archivo excede el límite de 10MB');
+			fileInput.value = '';
+			return;
+		}
+		attachedFile = file;
+		// Mostrar preview del archivo adjunto
+		const preview = document.createElement('div');
+		preview.id = 'file-preview';
+		preview.className = 'flex items-center gap-2 mb-2 p-2 bg-gray-100 rounded-lg';
+		if (file.type.startsWith('image/')) {
+			const url = URL.createObjectURL(file);
+			preview.innerHTML = `<img src="${url}" class="w-12 h-12 object-cover rounded" alt="Preview"><span class="text-xs text-gray-600 truncate max-w-[150px]">${file.name}</span>`;
+		} else {
+			preview.innerHTML = `<svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg><span class="text-xs text-gray-600 truncate max-w-[150px]">${file.name}</span>`;
+		}
+		chatMessages.appendChild(preview);
+		scrollToBottom();
+		fileInput.value = '';
+	});
+
+	let recognition;
+	if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+		const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+		recognition = new SpeechRecognition();
+		recognition.lang = 'es-ES';
+		recognition.continuous = false;
+		recognition.interimResults = false;
+
+		const voiceBtn = document.getElementById('voice-btn');
+		voiceBtn?.addEventListener('click', () => {
+			recognition.start();
+			voiceBtn.classList.add('animate-pulse');
+		});
+
+		recognition.onresult = (event) => {
+			const transcript = event.results[0][0].transcript;
+			chatInput.value = transcript;
+			voiceBtn?.classList.remove('animate-pulse');
+		};
+
+		recognition.onerror = () => {
+			voiceBtn?.classList.remove('animate-pulse');
+		};
+
+		recognition.onend = () => {
+			voiceBtn?.classList.remove('animate-pulse');
+		};
+	}
+</script>

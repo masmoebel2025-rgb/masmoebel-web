@@ -1,0 +1,24 @@
+---
+import SeriePage from '../../components/SeriePage.astro';
+
+const props = {
+  name: 'Serie 1 Gloss',
+  description: 'Acabado brillo elegante',
+  price: 'Desde 4.500€',
+  folder: 'Serie1_Gloss',
+  features: ['Brillo premium', 'Fácil limpieza', 'Resistente a rayaduras'],
+  colorImages: [
+    'F 1819 GLS Perla.png',
+    'F 3091 GLS Blanco.png',
+    'F 7932 GLS Hueso.png',
+    'Gris Marengo.png',
+    'K 3735-GLS Aluminio.png',
+    'SLG 001 White.png',
+    'SLG-003-Plumice Grey.png',
+    'SLG-008-SEA.png',
+    'SLG-014-Dove.png',
+  ],
+  slug: 'serie-1-gloss',
+};
+---
+<SeriePage {...props} />

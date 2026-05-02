@@ -1,0 +1,26 @@
+---
+const features = [
+	{ title: "Diseño a medida", description: "Creamos cocinas y muebles adaptados a tu espacio", icon: "1" },
+	{ title: "Calidad", description: "Materiales con la mejor relación calidad precio", icon: "2" },
+	{ title: "Garantía", description: "Respaldamos nuestros trabajos con una gran experiencia", icon: "3" },
+	{ title: "Asesoramiento", description: "Te acompañamos desde el diseño hasta la instalación", icon: "4" },
+	{ title: "Presupuesto", description: "¡Hazlo realidad con MasMöbel! Diseña tu presupuesto CODEX IA desde casa o agenda una visita técnica. Medimos y creamos tu proyecto personalizado y te lo presupuestamos a domicilio.", icon: "5", highlight: true },
+];
+---
+
+<section class="py-4 bg-white">
+	<div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
+		<h2 class="text-xl font-bold text-center text-[#1A1A1A] mb-4">¿Por qué elegirnos?</h2>
+		<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+			{features.map((feature) => (
+				<div class={`p-3 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${feature.highlight ? 'bg-[#8B7355] text-white' : 'bg-[#F5F5F5]'}`}>
+					<div class={`w-10 h-10 mx-auto mb-2 rounded-full flex items-center justify-center text-lg font-bold ${feature.highlight ? 'bg-white/20 text-white' : 'bg-[#8B7355] text-white'}`}>
+						{feature.icon}
+					</div>
+					<h3 class={`text-base font-semibold mb-2 ${feature.highlight ? 'text-white' : 'text-[#1A1A1A]'}`}>{feature.title}</h3>
+					<p class={`text-sm ${feature.highlight ? 'text-white/90' : 'text-[#4A4A4A]'}`}>{feature.description}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

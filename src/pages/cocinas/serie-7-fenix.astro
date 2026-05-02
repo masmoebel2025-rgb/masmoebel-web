@@ -1,0 +1,26 @@
+---
+import SeriePage from '../../components/SeriePage.astro';
+
+const props = {
+  name: 'Serie 7 Fénix',
+  description: 'Premium de alta gama',
+  price: 'Desde 6.800€',
+  folder: 'Serie7_Fenix',
+  features: ['Material Fénix', 'Antibacteriano', 'Alta gama'],
+  colorImages: [
+    'Azurro Naxos.png',
+    'Beige Arizona.png',
+    'Beige Luxor.png',
+    'Blanco Alaska.png',
+    'Blu Fes.png',
+    'Castoro otawa.png',
+    'Giallo.png',
+    'Gigrio Antrim.png',
+    'Grigio Zante.png',
+    'Gris Bromo.png',
+    'Negro Ingo.png',
+  ],
+  slug: 'serie-7-fenix',
+};
+---
+<SeriePage {...props} />

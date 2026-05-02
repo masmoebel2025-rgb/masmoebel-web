@@ -1,0 +1,107 @@
+---
+interface Props {
+	series: Array<{
+		name: string;
+		images: string[];
+		description: string;
+		price: string;
+	}>;
+}
+
+const { series } = Astro.props;
+---
+
+<div id="series-modal" class="fixed inset-0 z-[100] hidden" aria-hidden="true">
+	<div class="absolute inset-0 bg-black/95 backdrop-blur-sm" id="modal-backdrop"></div>
+	<div class="relative z-10 flex items-center justify-center w-full h-full p-4">
+		<div class="w-full h-full max-w-6xl max-h-[85vh] flex flex-col bg-[#1A1A1A] rounded-2xl overflow-hidden">
+			<div class="flex items-center justify-between px-6 py-4 border-b border-gray-800 flex-shrink-0">
+				<div>
+					<h3 id="modal-title" class="text-xl font-bold text-white"></h3>
+					<p id="modal-description" class="text-sm text-gray-400 mt-1"></p>
+				</div>
+				<div class="flex items-center gap-4">
+					<p id="modal-price" class="text-lg font-semibold text-[#8B7355]"></p>
+					<button
+						id="modal-close"
+						class="w-10 h-10 flex items-center justify-center text-white hover:text-[#8B7355] transition-colors"
+						aria-label="Cerrar"
+					>
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<div id="modal-images-grid" class="flex-1 p-4 gap-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 overflow-hidden">
+			</div>
+
+			<div class="flex-shrink-0 px-6 py-4 border-t border-gray-800">
+				<a
+					id="modal-contact"
+					href="/contacto"
+					class="block w-full py-3 bg-[#8B7355] text-white font-semibold text-center rounded-lg hover:bg-[#6d5a43] transition-colors"
+				>
+					Solicitar presupuesto
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script define:vars={{ series }}>
+	const modal = document.getElementById('series-modal');
+	const modalTitle = document.getElementById('modal-title');
+	const modalDescription = document.getElementById('modal-description');
+	const modalPrice = document.getElementById('modal-price');
+	const modalImagesGrid = document.getElementById('modal-images-grid');
+	const modalClose = document.getElementById('modal-close');
+	const modalBackdrop = document.getElementById('modal-backdrop');
+
+	function openModal(seriesIndex) {
+		const s = series[seriesIndex];
+		modalTitle.textContent = s.name;
+		modalDescription.textContent = s.description;
+		modalPrice.textContent = s.price;
+
+		const colClass = s.images.length <= 2 ? 'grid-cols-1 md:grid-cols-2'
+			: s.images.length <= 4 ? 'grid-cols-2 md:grid-cols-4'
+			: s.images.length <= 6 ? 'grid-cols-3 md:grid-cols-6'
+			: 'grid-cols-4 md:grid-cols-8';
+
+		modalImagesGrid.className = `flex-1 p-4 gap-3 grid ${colClass} overflow-hidden`;
+
+		modalImagesGrid.innerHTML = s.images.map((img, idx) => `
+			<div class="relative overflow-hidden rounded-xl bg-black aspect-square">
+				<img
+					src="${img}"
+					alt="${s.name} - Color ${idx + 1}"
+					class="w-full h-full object-contain"
+					loading="lazy"
+				/>
+			</div>
+		`).join('');
+
+		modal.classList.remove('hidden');
+		modal.setAttribute('aria-hidden', 'false');
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeModal() {
+		modal.classList.add('hidden');
+		modal.setAttribute('aria-hidden', 'true');
+		document.body.style.overflow = '';
+	}
+
+	// Note: [data-series-index] listeners removed - no elements have this attribute
+	// Modal is opened programmatically via openModal(seriesIndex)
+
+	modalClose.addEventListener('click', closeModal);
+	modalBackdrop.addEventListener('click', closeModal);
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+			closeModal();
+		}
+	});
+</script>

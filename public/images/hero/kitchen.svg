@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1440">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d2d2d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1440" fill="url(#grad1)"/>
+
+  <!-- Kitchen counter -->
+  <rect x="200" y="900" width="1520" height="200" fill="#5a4a3a" rx="10"/>
+
+  <!-- Cabinet door 1 -->
+  <rect x="250" y="800" width="280" height="400" fill="#8B7355" rx="5"/>
+  <rect x="270" y="820" width="240" height="360" fill="#9d8568" rx="3"/>
+  <circle cx="500" cy="1000" r="8" fill="#d4a574"/>
+
+  <!-- Cabinet door 2 -->
+  <rect x="650" y="800" width="280" height="400" fill="#8B7355" rx="5"/>
+  <rect x="670" y="820" width="240" height="360" fill="#9d8568" rx="3"/>
+  <circle cx="900" cy="1000" r="8" fill="#d4a574"/>
+
+  <!-- Cabinet door 3 -->
+  <rect x="1050" y="800" width="280" height="400" fill="#8B7355" rx="5"/>
+  <rect x="1070" y="820" width="240" height="360" fill="#9d8568" rx="3"/>
+  <circle cx="1300" cy="1000" r="8" fill="#d4a574"/>
+
+  <!-- Cabinet door 4 -->
+  <rect x="1450" y="800" width="280" height="400" fill="#8B7355" rx="5"/>
+  <rect x="1470" y="820" width="240" height="360" fill="#9d8568" rx="3"/>
+  <circle cx="1700" cy="1000" r="8" fill="#d4a574"/>
+
+  <!-- Countertop shine -->
+  <ellipse cx="960" cy="900" rx="700" ry="50" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Sink -->
+  <rect x="650" y="950" width="200" height="150" fill="#c0c0c0" rx="5"/>
+  <rect x="670" y="970" width="160" height="110" fill="#888888" rx="3"/>
+
+  <!-- Stovetop -->
+  <rect x="1050" y="950" width="200" height="150" fill="#3a3a3a" rx="5"/>
+  <circle cx="1100" cy="1000" r="25" fill="#4a4a4a"/>
+  <circle cx="1100" cy="1000" r="15" fill="#2a2a2a"/>
+  <circle cx="1200" cy="1000" r="25" fill="#4a4a4a"/>
+  <circle cx="1200" cy="1000" r="15" fill="#2a2a2a"/>
+  <circle cx="1100" cy="1080" r="25" fill="#4a4a4a"/>
+  <circle cx="1100" cy="1080" r="15" fill="#2a2a2a"/>
+  <circle cx="1200" cy="1080" r="25" fill="#4a4a4a"/>
+  <circle cx="1200" cy="1080" r="15" fill="#2a2a2a"/>
+
+  <!-- Text overlay -->
+  <text x="960" y="400" font-size="72" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">Cocinas a Medida</text>
+  <text x="960" y="500" font-size="48" text-anchor="middle" fill="#c9a661" font-family="Arial">Diseño • Calidad • Innovación</text>
+</svg>

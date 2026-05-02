@@ -1,0 +1,26 @@
+---
+import SeriePage from '../../components/SeriePage.astro';
+
+const props = {
+  name: 'Serie 3 Adira',
+  description: 'Diseño moderno y funcional',
+  price: 'Desde 5.200€',
+  folder: 'Serie3_Adira',
+  features: ['Diseño moderno', 'Máximo almacenamiento', 'Alta durabilidad'],
+  colorImages: [
+    'Aguamarina Urban.png',
+    'Blanco Finlandia.png',
+    'Cacao.png',
+    'Cafe Latte.png',
+    'Capuccino.png',
+    'Ceniza.png',
+    'Gris Oscuro.png',
+    'Negro Madagascar.png',
+    'Sahara.png',
+    'Verde Liquen.png',
+    'Verde Oliva.png',
+  ],
+  slug: 'serie-3-adira',
+};
+---
+<SeriePage {...props} />

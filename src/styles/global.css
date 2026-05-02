@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+	--container-width-xl: 1280px;
+
+	/* Design System Colors - Masmoebel Premium Dark */
+	--color-primary: #1C1917;
+	--color-primary-light: #44403C;
+	--color-secondary: #44403C;
+	--color-cta: #CA8A04;
+	--color-cta-hover: #A16207;
+	--color-background: #FAFAF9;
+	--color-surface: #FFFFFF;
+	--color-text: #0C0A09;
+	--color-text-muted: #78716C;
+	--color-border: #E7E5E4;
+	--color-accent: #CA8A04;
+
+	/* Typography Scale */
+	--font-heading: 'Playfair Display', Georgia, serif;
+	--font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-body);
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--color-text);
+	background-color: var(--color-background);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: var(--color-primary);
+	text-decoration: none;
+	transition: color 150ms ease;
+}
+
+a:hover {
+	color: var(--color-cta);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+@layer utilities {
+	.container {
+		width: 100%;
+		max-width: 1280px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.btn-primary {
+		background-color: var(--color-cta);
+		color: var(--color-primary);
+		padding: 0.875rem 2rem;
+		border-radius: 0.375rem;
+		font-weight: 600;
+		transition: all 200ms ease;
+		cursor: pointer;
+		border: none;
+		letter-spacing: 0.025em;
+	}
+
+	.btn-primary:hover {
+		background-color: var(--color-cta-hover);
+		transform: translateY(-2px);
+		box-shadow: 0 8px 24px rgba(202, 138, 4, 0.25);
+	}
+
+	.btn-secondary {
+		background-color: var(--color-primary);
+		color: white;
+		padding: 0.875rem 2rem;
+		border-radius: 0.375rem;
+		font-weight: 600;
+		transition: all 200ms ease;
+		cursor: pointer;
+		border: none;
+	}
+
+	.btn-secondary:hover {
+		background-color: var(--color-primary-light);
+		transform: translateY(-2px);
+	}
+
+	.text-gradient {
+		background: linear-gradient(135deg, var(--color-cta) 0%, #EAB308 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.card {
+		background: var(--color-surface);
+		border-radius: 0.75rem;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+		transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+		border: 1px solid var(--color-border);
+	}
+
+	.card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+		border-color: var(--color-cta);
+	}
+
+	.section-dark {
+		background: var(--color-primary);
+		color: white;
+	}
+
+	.gold-accent {
+		color: var(--color-cta);
+	}
+}

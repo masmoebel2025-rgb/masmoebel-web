@@ -1,0 +1,22 @@
+---
+import SeriePage from '../../components/SeriePage.astro';
+
+const props = {
+  name: 'Serie 4 Universo',
+  description: 'Estilo contemporáneo',
+  price: 'Desde 5.500€',
+  folder: 'Serie4_Universo',
+  features: ['Estilo contemporáneo', 'Líneas limpias', 'Versátil'],
+  colorImages: [
+    'Universo Bleen UNI-011.png',
+    'Universo Gris Nube UNI-004.png',
+    'Universo Latte UNI-002.png',
+    'Universo Mistyc UNI-010.png',
+    'Universo Mouse UNI-007.png',
+    'Universo Taupe UNI-003.png',
+    'Universo White UNI-001.png',
+  ],
+  slug: 'serie-4-universo',
+};
+---
+<SeriePage {...props} />

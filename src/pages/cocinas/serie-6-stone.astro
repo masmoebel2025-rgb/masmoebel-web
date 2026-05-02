@@ -1,0 +1,21 @@
+---
+import SeriePage from '../../components/SeriePage.astro';
+
+const props = {
+  name: 'Serie 6 Stone',
+  description: 'Acabado piedra natural',
+  price: 'Desde 6.200€',
+  folder: 'Serie6_Stone',
+  features: ['Acabado piedra natural', 'Ultra resistente', 'Look orgánico'],
+  colorImages: [
+    'Blanco.png',
+    'Carrara.png',
+    'Monaco.png',
+    'Ribea.png',
+    'Stuario Blanco.png',
+    'Stuario Marrone.png',
+  ],
+  slug: 'serie-6-stone',
+};
+---
+<SeriePage {...props} />

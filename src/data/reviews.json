@@ -1,0 +1,107 @@
+[
+	{
+		"nombre": "Manuel Reja",
+		"texto": "Me han montado varias cocinas, pero la profesionalidad y sobre todo la finalización de esta empresa la recomiendo 100%100. Con las cocinas he tenido problemas",
+		"estrellas": 5,
+		"fecha": "Hace un mes",
+		"proyecto": "Montaje cocinas"
+	},
+	{
+		"nombre": "Ana Aramburu",
+		"texto": "Excelente experiencia. Desde el primer momento han sido súper profesionales. Totalmente recomendables!",
+		"estrellas": 5,
+		"fecha": "Hace 2 meses",
+		"proyecto": "Cocinas"
+	},
+	{
+		"nombre": "Pepi Roldan Roldan",
+		"texto": "Muy buen trabajo el que me a echo y un gran profesional.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Trabajo profesional"
+	},
+	{
+		"nombre": "Rosario BauGar",
+		"texto": "Experiencia 100% positiva. Los materiales son de muy buena calidad, además del trato y la profesionalidad por parte de Sebastián, lo recomiendo sin ninguna duda.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Materiales calidad"
+	},
+	{
+		"nombre": "Diego Dominguez",
+		"texto": "Un trato recibido excelente y cordial muy detallista al terminar el trabajo un profesional. Lo recomiendo tiene productos de buena calidad y un buen precio.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Productos calidad"
+	},
+	{
+		"nombre": "Abel Molina",
+		"texto": "Empresa espectacular, trato cercano y amable, todo bien especificado, precios economicos y calidad mejor que buena.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Precios económicos"
+	},
+	{
+		"nombre": "Rocio Dominguez Rodriguez",
+		"texto": "Muy buena persona y profesional. Lo recomiendo.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Profesional"
+	},
+	{
+		"nombre": "Mariam Toro",
+		"texto": "Muy satisfecha con el trabajo. Excelentes productos y trato muy bueno. Lo recomiendo.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Productos y trato"
+	},
+	{
+		"nombre": "Andres Martin Gomez",
+		"texto": "Muy buen profesional!!!!!!, y sobre todo muy amable, siempre buscando soluciones.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Amabilidad y soluciones"
+	},
+	{
+		"nombre": "MANUEL JESUS BARRIGA BELTRAN",
+		"texto": "Muy satisfecho. Buena atención, formalidad y muy buen trabajo.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Atención y formalidad"
+	},
+	{
+		"nombre": "Francisco luis Ponce Perez",
+		"texto": "Todo muy bien ejecutado y dentro de fecha. Muy recomendable.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Ejecución y plazos"
+	},
+	{
+		"nombre": "Susana Avilés jorge",
+		"texto": "Trato cercano y maravilloso servicio! Lo recomiendo 100%.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Servicio cercano"
+	},
+	{
+		"nombre": "juan francisco romero dominguez",
+		"texto": "Buen trabajo, rápido y muy bien terminado.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Rapidez y calidad"
+	},
+	{
+		"nombre": "Chari Muñoz",
+		"texto": "Muy contenta con el trabajo realizado.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Trabajo completado"
+	},
+	{
+		"nombre": "Marilo Rodríguez García",
+		"texto": "Excelente trabajo.",
+		"estrellas": 5,
+		"fecha": "Hace 2 años",
+		"proyecto": "Excelencia"
+	}
+]

@@ -1,0 +1,18 @@
+---
+import SeriePage from '../../components/SeriePage.astro';
+
+const props = {
+  name: 'Serie 2 Matt',
+  description: 'Acabado mate sofisticado',
+  price: 'Desde 4.800€',
+  folder: 'Serie2_Matt',
+  features: ['Acabado mate', 'Anti-huellas', 'Moderno y elegante'],
+  colorImages: [
+    '1410 LC.png',
+    'Alpine White.png',
+    'BLP 805 Soft.png',
+  ],
+  slug: 'serie-2-matt',
+};
+---
+<SeriePage {...props} />

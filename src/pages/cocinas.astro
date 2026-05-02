@@ -1,0 +1,75 @@
+---
+import { series } from '../data/series';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// Map series data with image paths
+const seriesWithImages = series.map((s) => ({
+	...s,
+	image: `/images/cocinas/${s.folder}/combined.jpg`,
+}));
+
+const siteUrl = "https://masmoebel.es";
+
+const breadcrumbsSchema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+		{ "@type": "ListItem", "position": 1, "name": "Inicio", "item": siteUrl },
+		{ "@type": "ListItem", "position": 2, "name": "Cocinas", "item": siteUrl + "/cocinas" }
+	]
+};
+---
+
+<Layout title="Cocinas a Medida">
+	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbsSchema)} />
+	<Header />
+
+	<main>
+		<section class="pt-20 pb-8 bg-gradient-to-br from-[#1A1A1A] via-[#2a2a2a] to-[#1A1A1A] text-center px-4 relative overflow-hidden">
+			<div class="absolute inset-0 opacity-10">
+				<div class="absolute top-10 left-10 w-32 h-32 bg-[#8B7355] rounded-full blur-3xl"></div>
+				<div class="absolute bottom-10 right-10 w-48 h-48 bg-[#8B7355] rounded-full blur-3xl"></div>
+			</div>
+			<div class="relative z-10 max-w-4xl mx-auto">
+				<h1 class="text-3xl md:text-4xl font-bold text-white mb-3">Cocinas a Medida</h1>
+				<p class="text-base text-gray-300">8 series exclusivas para crear tu cocina ideal</p>
+			</div>
+		</section>
+
+		<section class="py-8 bg-white px-4">
+			<div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
+				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+					{seriesWithImages.map((serie, index) => (
+						<a href={`/cocinas/${serie.slug}`} class="group block cursor-pointer overflow-hidden rounded-xl hover:shadow-lg transition-shadow">
+							<div class="relative" style="aspect-ratio: 3/2;">
+								<img
+									src={serie.image}
+									alt={serie.name}
+									class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+									loading={index < 3 ? 'eager' : 'lazy'}
+								/>
+							</div>
+							<div class="mt-4">
+								<h3 class="text-lg font-semibold text-[#1A1A1A] group-hover:text-[#8B7355] transition-colors">{serie.name}</h3>
+								<p class="text-sm text-[#4A4A4A] mt-1">{serie.description}</p>
+								<p class="text-base text-[#8B7355] mt-2 font-semibold">{serie.price}</p>
+							</div>
+						</a>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<section class="py-8 bg-[#F5F5F5] text-center px-4">
+			<div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
+				<h2 class="text-xl font-bold text-[#1A1A1A] mb-2">¿No encuentras lo que buscas?</h2>
+				<p class="text-sm text-[#4A4A4A] mb-4">Diseñamos tu cocina ideal a medida con exactamente lo que necesitas</p>
+				<a href="/contacto" class="inline-block px-6 py-3 bg-[#8B7355] text-white text-sm rounded-lg hover:bg-[#6d5a43] transition-colors">Contactar</a>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
