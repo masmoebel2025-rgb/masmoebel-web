@@ -19,5 +19,7 @@
     "astro": "^6.1.10",
     "tailwindcss": "^4.2.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@astrojs/netlify": "^7.0.8"
+  }
 }

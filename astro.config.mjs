@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import netlify from 'astro-netlify';
+import netlify from '@astrojs/netlify';
 
 export default defineConfig({
   output: 'server',
