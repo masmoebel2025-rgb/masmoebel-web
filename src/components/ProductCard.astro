@@ -23,11 +23,11 @@ const { name, price, imageUrl, category, href } = Astro.props;
 		</div>
 		<div class="mt-3 transition-colors duration-300">
 			{category && (
-				<span class="text-xs text-[#8B7355]">{category}</span>
+				<span class="text-xs text-orange-600 font-semibold">{category}</span>
 			)}
-			<h3 class="text-sm font-medium text-[#1A1A1A] group-hover:text-[#8B7355] transition-colors duration-300">{name}</h3>
+			<h3 class="text-sm font-medium text-gray-900 group-hover:text-orange-600 transition-colors duration-300">{name}</h3>
 			{price && (
-				<p class="text-sm text-[#8B7355]">{price}</p>
+				<p class="text-sm text-orange-600 font-semibold">{price}</p>
 			)}
 		</div>
 	</a>
