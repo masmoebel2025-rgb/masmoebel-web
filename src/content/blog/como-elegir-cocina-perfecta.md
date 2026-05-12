@@ -2,7 +2,7 @@
 title: "Cómo Elegir la Cocina Perfecta para tu Hogar"
 description: "Guía completa para elegir tu cocina ideal: distribución, materiales, acabados y presupuesto. Todo lo que necesitas saber antes de reformar."
 date: 2026-05-12
-image: /images/blog/elegir-cocina.jpg
+image: /images/blog/elegir-cocina.svg
 imageAlt: Cocina moderna a medida con acabados premium
 tags: [guía, diseño, cocinas]
 ---

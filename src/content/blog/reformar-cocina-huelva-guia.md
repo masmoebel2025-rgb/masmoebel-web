@@ -2,7 +2,7 @@
 title: "Reformar la Cocina en Huelva: Guía Práctica Paso a Paso"
 description: "Todo lo que necesitas saber para reformar tu cocina en Huelva: permisos, plazos, costes reales y cómo evitar los errores más comunes."
 date: 2026-05-06
-image: /images/blog/reformar-cocina-huelva.jpg
+image: /images/blog/reformar-cocina-huelva.svg
 imageAlt: Reforma de cocina en vivienda de Huelva
 tags: [reforma, huelva, guía]
 ---

@@ -2,7 +2,7 @@
 title: "Cocinas a Medida vs Cocinas Modulares: ¿Cuál te Conviene?"
 description: "Comparativa honesta entre cocinas a medida y modulares. Ventajas, inconvenientes y cuándo merece la pena cada opción para tu hogar en Huelva."
 date: 2026-05-08
-image: /images/blog/medida-vs-modular.jpg
+image: /images/blog/medida-vs-modular.svg
 imageAlt: Comparativa entre cocina a medida y cocina modular
 tags: [guía, cocinas a medida]
 ---

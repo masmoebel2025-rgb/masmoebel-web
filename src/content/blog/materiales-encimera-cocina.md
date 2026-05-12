@@ -2,7 +2,7 @@
 title: "Guía de Materiales para Encimeras de Cocina: Cuál Elegir y Por Qué"
 description: "Comparativa completa de materiales para encimeras: cuarzo, granito, porcelánico, madera y laminado. Pros, contras y precios reales."
 date: 2026-05-04
-image: /images/blog/encimeras-materiales.jpg
+image: /images/blog/encimeras-materiales.svg
 imageAlt: Muestras de diferentes materiales de encimera de cocina
 tags: [materiales, encimeras, guía]
 ---

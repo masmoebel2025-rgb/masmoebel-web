@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1C1917"/>
+      <stop offset="100%" style="stop-color:#292524"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg3)"/>
+  <!-- Divider -->
+  <line x1="600" y1="60" x2="600" y2="500" stroke="#CA8A04" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="600" y="40" font-family="sans-serif" font-size="16" fill="#CA8A04" text-anchor="middle" font-weight="600">VS</text>
+  <!-- Left side: A Medida -->
+  <text x="300" y="100" font-family="Georgia, serif" font-size="26" fill="white" text-anchor="middle" font-weight="600">A Medida</text>
+  <!-- Custom kitchen - perfect fit -->
+  <rect x="80" y="140" width="440" height="200" rx="8" fill="#44403C" stroke="#CA8A04" stroke-width="1.5"/>
+  <!-- Inner cabinets fitting perfectly -->
+  <rect x="95" y="155" width="100" height="170" rx="4" fill="#57534E" stroke="#78716C" stroke-width="1"/>
+  <rect x="205" y="155" width="73" height="170" rx="4" fill="#57534E" stroke="#78716C" stroke-width="1"/>
+  <rect x="288" y="155" width="110" height="170" rx="4" fill="#57534E" stroke="#78716C" stroke-width="1"/>
+  <rect x="408" y="155" width="98" height="170" rx="4" fill="#57534E" stroke="#78716C" stroke-width="1"/>
+  <!-- Checkmarks -->
+  <text x="140" y="400" font-family="sans-serif" font-size="14" fill="#4ade80">✓ Cada cm aprovechado</text>
+  <text x="140" y="430" font-family="sans-serif" font-size="14" fill="#4ade80">✓ 20-25 años de vida</text>
+  <text x="140" y="460" font-family="sans-serif" font-size="14" fill="#4ade80">✓ Materiales premium</text>
+  <text x="140" y="490" font-family="sans-serif" font-size="14" fill="#4ade80">✓ Diseño personalizado</text>
+  <!-- Right side: Modular -->
+  <text x="900" y="100" font-family="Georgia, serif" font-size="26" fill="white" text-anchor="middle" font-weight="600">Modular</text>
+  <!-- Modular kitchen - gaps -->
+  <rect x="680" y="140" width="440" height="200" rx="8" fill="#44403C" stroke="#78716C" stroke-width="1.5"/>
+  <!-- Standard modules with gaps -->
+  <rect x="695" y="155" width="90" height="170" rx="4" fill="#57534E" stroke="#78716C" stroke-width="1"/>
+  <rect x="795" y="155" width="90" height="170" rx="4" fill="#57534E" stroke="#78716C" stroke-width="1"/>
+  <!-- Gap highlighted -->
+  <rect x="895" y="155" width="30" height="170" rx="2" fill="#7f1d1d" opacity="0.4" stroke="#ef4444" stroke-width="1" stroke-dasharray="4 3"/>
+  <rect x="935" y="155" width="90" height="170" rx="4" fill="#57534E" stroke="#78716C" stroke-width="1"/>
+  <rect x="1035" y="155" width="70" height="170" rx="4" fill="#57534E" stroke="#78716C" stroke-width="1"/>
+  <!-- Neutral marks -->
+  <text x="740" y="400" font-family="sans-serif" font-size="14" fill="#a8a29e">○ Medidas estándar</text>
+  <text x="740" y="430" font-family="sans-serif" font-size="14" fill="#a8a29e">○ 8-12 años de vida</text>
+  <text x="740" y="460" font-family="sans-serif" font-size="14" fill="#a8a29e">○ Disponibilidad rápida</text>
+  <text x="740" y="490" font-family="sans-serif" font-size="14" fill="#a8a29e">○ Menor inversión</text>
+  <!-- Text overlay -->
+  <rect x="0" y="530" width="1200" height="145" fill="#1C1917" opacity="0.85"/>
+  <text x="600" y="590" font-family="Georgia, serif" font-size="38" fill="white" text-anchor="middle" font-weight="600">A Medida vs Modular</text>
+  <text x="600" y="630" font-family="sans-serif" font-size="18" fill="#CA8A04" text-anchor="middle">Comparativa honesta para tu decisión</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1C1917"/>
+      <stop offset="100%" style="stop-color:#292524"/>
+    </linearGradient>
+    <pattern id="granite" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#6b6b6b"/>
+      <circle cx="2" cy="3" r="1" fill="#888"/>
+      <circle cx="6" cy="7" r="1.2" fill="#555"/>
+      <circle cx="5" cy="1" r="0.8" fill="#999"/>
+    </pattern>
+    <pattern id="wood" width="200" height="12" patternUnits="userSpaceOnUse">
+      <rect width="200" height="12" fill="#8B6914"/>
+      <line x1="0" y1="3" x2="200" y2="4" stroke="#7a5c12" stroke-width="0.5"/>
+      <line x1="0" y1="8" x2="200" y2="7" stroke="#9a7920" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg5)"/>
+  <!-- Material samples as large cards -->
+  <!-- Cuarzo -->
+  <rect x="60" y="80" width="340" height="200" rx="12" fill="#e8e0d4"/>
+  <rect x="60" y="80" width="340" height="140" rx="12" fill="#d4cdc0"/>
+  <rect x="60" y="220" width="340" height="60" rx="0 0 12 12" fill="#44403C"/>
+  <text x="230" y="255" font-family="Georgia, serif" font-size="18" fill="white" text-anchor="middle">Cuarzo Compacto</text>
+  <text x="230" y="165" font-family="sans-serif" font-size="42" fill="#78716C" text-anchor="middle" opacity="0.3">Silestone</text>
+  <!-- Porcelánico -->
+  <rect x="430" y="80" width="340" height="200" rx="12" fill="#78716C"/>
+  <rect x="430" y="80" width="340" height="140" rx="12" fill="#6b6560"/>
+  <rect x="430" y="220" width="340" height="60" rx="0 0 12 12" fill="#44403C"/>
+  <text x="600" y="255" font-family="Georgia, serif" font-size="18" fill="white" text-anchor="middle">Porcelánico</text>
+  <text x="600" y="165" font-family="sans-serif" font-size="42" fill="#57534E" text-anchor="middle" opacity="0.4">Dekton</text>
+  <!-- Granito -->
+  <rect x="800" y="80" width="340" height="200" rx="12" fill="url(#granite)"/>
+  <rect x="800" y="220" width="340" height="60" rx="0 0 12 12" fill="#44403C"/>
+  <text x="970" y="255" font-family="Georgia, serif" font-size="18" fill="white" text-anchor="middle">Granito Natural</text>
+  <!-- Madera -->
+  <rect x="60" y="310" width="340" height="160" rx="12" fill="url(#wood)"/>
+  <rect x="60" y="410" width="340" height="60" rx="0 0 12 12" fill="#44403C"/>
+  <text x="230" y="445" font-family="Georgia, serif" font-size="18" fill="white" text-anchor="middle">Madera Maciza</text>
+  <!-- Laminado -->
+  <rect x="430" y="310" width="340" height="160" rx="12" fill="#b8a88a"/>
+  <rect x="430" y="410" width="340" height="60" rx="0 0 12 12" fill="#44403C"/>
+  <text x="600" y="445" font-family="Georgia, serif" font-size="18" fill="white" text-anchor="middle">Laminado HPL</text>
+  <!-- Price comparison -->
+  <rect x="800" y="310" width="340" height="160" rx="12" fill="#44403C" stroke="#CA8A04" stroke-width="1.5"/>
+  <text x="970" y="355" font-family="sans-serif" font-size="14" fill="#CA8A04" text-anchor="middle" font-weight="600">€/m² instalado</text>
+  <text x="860" y="385" font-family="sans-serif" font-size="12" fill="#a8a29e">Cuarzo</text>
+  <rect x="930" y="373" width="120" height="12" rx="3" fill="#CA8A04" opacity="0.7"/>
+  <text x="860" y="408" font-family="sans-serif" font-size="12" fill="#a8a29e">Porcelánico</text>
+  <rect x="930" y="396" width="160" height="12" rx="3" fill="#CA8A04" opacity="0.9"/>
+  <text x="860" y="431" font-family="sans-serif" font-size="12" fill="#a8a29e">Granito</text>
+  <rect x="930" y="419" width="90" height="12" rx="3" fill="#CA8A04" opacity="0.5"/>
+  <text x="860" y="454" font-family="sans-serif" font-size="12" fill="#a8a29e">Madera</text>
+  <rect x="930" y="442" width="110" height="12" rx="3" fill="#CA8A04" opacity="0.6"/>
+  <!-- Text overlay -->
+  <rect x="0" y="530" width="1200" height="145" fill="#1C1917" opacity="0.85"/>
+  <text x="600" y="590" font-family="Georgia, serif" font-size="38" fill="white" text-anchor="middle" font-weight="600">Materiales para Encimeras</text>
+  <text x="600" y="630" font-family="sans-serif" font-size="18" fill="#CA8A04" text-anchor="middle">Cuál elegir y por qué — comparativa completa</text>
+</svg>

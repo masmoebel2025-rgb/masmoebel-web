@@ -2,7 +2,7 @@
 title: "Tendencias en Cocinas 2026: Lo que se Lleva Este Año"
 description: "Descubre las tendencias en diseño de cocinas para 2026: colores, materiales, tecnología y distribuciones que marcan la diferencia."
 date: 2026-05-10
-image: /images/blog/tendencias-2026.jpg
+image: /images/blog/tendencias-2026.svg
 imageAlt: Cocina moderna con colores naturales y materiales premium
 tags: [tendencias, diseño]
 ---
