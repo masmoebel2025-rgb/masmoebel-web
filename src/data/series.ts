@@ -13,7 +13,7 @@ export const series: Series[] = [
     slug: 'serie-1-gloss',
     name: 'Serie 1 Gloss',
     description: 'Acabado brillo elegante',
-    price: 'Desde 4.500€',
+    price: 'Desde 2.550€',
     folder: 'Serie1_Gloss',
     features: ['Brillo premium', 'Fácil limpieza', 'Resistente a rayaduras'],
     colorImages: [
@@ -32,7 +32,7 @@ export const series: Series[] = [
     slug: 'serie-2-matt',
     name: 'Serie 2 Matt',
     description: 'Acabado mate sofisticado',
-    price: 'Desde 4.800€',
+    price: 'Desde 2.600€',
     folder: 'Serie2_Matt',
     features: ['Acabado mate', 'Anti-huellas', 'Moderno y elegante'],
     colorImages: [
@@ -45,7 +45,7 @@ export const series: Series[] = [
     slug: 'serie-3-adira',
     name: 'Serie 3 Adira',
     description: 'Diseño moderno y funcional',
-    price: 'Desde 5.200€',
+    price: 'Desde 2.650€',
     folder: 'Serie3_Adira',
     features: ['Diseño moderno', 'Máximo almacenamiento', 'Alta durabilidad'],
     colorImages: [
@@ -66,7 +66,7 @@ export const series: Series[] = [
     slug: 'serie-4-universo',
     name: 'Serie 4 Universo',
     description: 'Estilo contemporáneo',
-    price: 'Desde 5.500€',
+    price: 'Desde 2.750€',
     folder: 'Serie4_Universo',
     features: ['Estilo contemporáneo', 'Líneas limpias', 'Versátil'],
     colorImages: [
@@ -83,7 +83,7 @@ export const series: Series[] = [
     slug: 'serie-5-real',
     name: 'Serie 5 Real',
     description: 'Clásica moderna',
-    price: 'Desde 5.800€',
+    price: 'Desde 2.850€',
     folder: 'Serie5_Real',
     features: ['Diseño clásico moderno', 'Acabados premium', 'Elegancia atemporal'],
     colorImages: [
@@ -111,7 +111,7 @@ export const series: Series[] = [
     slug: 'serie-6-stone',
     name: 'Serie 6 Stone',
     description: 'Acabado piedra natural',
-    price: 'Desde 6.200€',
+    price: 'Desde 2.950€',
     folder: 'Serie6_Stone',
     features: ['Acabado piedra natural', 'Ultra resistente', 'Look orgánico'],
     colorImages: [
@@ -127,7 +127,7 @@ export const series: Series[] = [
     slug: 'serie-7-fenix',
     name: 'Serie 7 Fénix',
     description: 'Premium de alta gama',
-    price: 'Desde 6.800€',
+    price: 'Desde 3.050€',
     folder: 'Serie7_Fenix',
     features: ['Material Fénix', 'Antibacteriano', 'Alta gama'],
     colorImages: [
@@ -148,7 +148,7 @@ export const series: Series[] = [
     slug: 'serie-8-finger-pull',
     name: 'Serie 8 Finger Pull',
     description: 'Sin tiradores, diseño minimalista',
-    price: 'Desde 7.200€',
+    price: 'Desde 4.000€',
     folder: 'Serie8_FingerPull',
     features: ['Sin tiradores', 'Diseño minimalista', 'Máxima comodidad'],
     colorImages: [
