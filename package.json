@@ -15,11 +15,16 @@
     "cleanup:series": "node delete_series.mjs"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.4",
-    "astro": "^6.1.10",
-    "tailwindcss": "^4.2.4"
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2",
+    "@tailwindcss/vite": "4.2.4",
+    "astro": "6.1.10",
+    "tailwindcss": "4.2.4"
   },
   "devDependencies": {
-    "@astrojs/netlify": "^7.0.8"
+    "@astrojs/netlify": "7.0.8"
+  },
+  "overrides": {
+    "vite": "7.3.3"
   }
 }

@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export const prerender = true;
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout
+  title="Blog — Consejos, Tendencias y Guías de Cocinas"
+  description="Artículos sobre diseño de cocinas, tendencias, materiales, reformas y consejos prácticos para tu hogar. Blog de MasMöbel, especialistas en cocinas a medida en Huelva."
+>
+  <Header />
+
+  <main class="pt-24 pb-16">
+    <section class="container" style="max-width: 1280px;">
+      <div class="text-center mb-14">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style="font-family: var(--font-heading);">Blog</h1>
+        <p class="text-lg text-gray-500 max-w-2xl mx-auto">Ideas, tendencias y consejos para diseñar la cocina perfecta</p>
+      </div>
+
+      {posts.length === 0 ? (
+        <p class="text-center text-gray-400">Próximamente publicaremos nuevos artículos.</p>
+      ) : (
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map((post) => (
+            <a href={`/blog/${post.id}`} class="group block bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-lg hover:border-orange-200 transition-all duration-300 hover:-translate-y-1">
+              {post.data.image && (
+                <div class="overflow-hidden">
+                  <img
+                    src={post.data.image}
+                    alt={post.data.imageAlt ?? post.data.title}
+                    width="400"
+                    height="225"
+                    class="w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    style="aspect-ratio: 16/9;"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+              <div class="p-6">
+                <div class="flex flex-wrap gap-2 mb-3">
+                  {post.data.tags.slice(0, 2).map((tag) => (
+                    <span class="text-xs font-semibold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-0.5 rounded-full">{tag}</span>
+                  ))}
+                </div>
+                <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors" style="font-family: var(--font-heading);">{post.data.title}</h2>
+                <p class="text-sm text-gray-500 mb-4 line-clamp-2">{post.data.description}</p>
+                <time datetime={post.data.date.toISOString()} class="text-xs text-gray-400">
+                  {post.data.date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
