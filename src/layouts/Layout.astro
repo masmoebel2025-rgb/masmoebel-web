@@ -31,6 +31,15 @@ const currentUrl = new URL(Astro.url.pathname, siteUrl);
 		<meta name="robots" content="index, follow" />
 		<link rel="canonical" href={currentUrl} />
 
+		<!-- Google Analytics 4 -->
+		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-3F8R8VWPEH"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-3F8R8VWPEH');
+		</script>
+
 		<!-- Open Graph -->
 		<meta property="og:title" content={`${title} | MasMöbel`} />
 		<meta property="og:description" content={description} />
