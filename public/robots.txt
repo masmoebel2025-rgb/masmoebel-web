@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://masmoebel.es/sitemap.xml
+Sitemap: https://masmoebel.es/sitemap-index.xml
