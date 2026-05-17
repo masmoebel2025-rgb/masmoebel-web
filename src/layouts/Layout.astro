@@ -29,6 +29,7 @@ const currentUrl = new URL(Astro.url.pathname, siteUrl);
 		<meta name="description" content={description} />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href={currentUrl} />
 
 		<!-- Open Graph -->
 		<meta property="og:title" content={`${title} | MasMöbel`} />
