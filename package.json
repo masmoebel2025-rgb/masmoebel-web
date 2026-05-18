@@ -11,8 +11,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "cleanup:series": "node delete_series.mjs"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
