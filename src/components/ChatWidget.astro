@@ -146,7 +146,19 @@ const CODEX_API = "https://wa.masmoebel.es/web-chat";
 	const toast = document.getElementById('chat-toast');
 	const toastMessage = document.getElementById('chat-toast-message');
 
-	let sessionId = 'web-' + Date.now();
+	let sessionId = (function getOrCreateSessionId() {
+		const STORAGE_KEY = 'masmoebel_session_id';
+		try {
+			let id = localStorage.getItem(STORAGE_KEY);
+			if (!id) {
+				id = 'web-' + Date.now();
+				localStorage.setItem(STORAGE_KEY, id);
+			}
+			return id;
+		} catch (e) {
+			return 'web-' + Date.now();
+		}
+	})();
 	let toastTimeout;
 	let attachedFile = null;
 
