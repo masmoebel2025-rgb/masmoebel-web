@@ -36,3 +36,6 @@ src/data/colores.json
 __pycache__/
 *.pyc
 scripts/__pycache__/
+
+# local AI-generated backups
+backup_*/
