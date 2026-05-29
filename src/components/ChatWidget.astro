@@ -10,7 +10,7 @@ const CODEX_API = "https://wa.masmoebel.es/web-chat";
 
 <div id="chat-widget" class="fixed bottom-6 right-6 z-50">
 	<!-- Mía Label -->
-	<span id="chat-label" class="text-base font-semibold text-[#25D366] bg-transparent px-2 py-1 rounded-full cursor-pointer hover:opacity-80 transition-opacity">Mía</span>
+	<span id="chat-label" class="chat-label-anim text-lg font-semibold text-[#25D366] bg-transparent px-2 py-1 rounded-full cursor-pointer hover:opacity-80 transition-opacity">Mía</span>
 
 	<!-- Chat Button -->
 	<button
@@ -92,7 +92,8 @@ const CODEX_API = "https://wa.masmoebel.es/web-chat";
 		0%, 100% { transform: translateY(0); }
 		50% { transform: translateY(-8px); }
 	}
-	#chat-widget:has(#chat-window.hidden) #chat-btn {
+	#chat-widget:has(#chat-window.hidden) .chat-label-anim { animation: float 3s ease-in-out infinite; }
+  #chat-widget:has(#chat-window.hidden) #chat-btn {
 		animation: float 3s ease-in-out infinite;
 	}
 	#chat-window {
