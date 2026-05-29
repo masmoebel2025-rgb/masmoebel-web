@@ -9,8 +9,8 @@ const CODEX_API = "https://wa.masmoebel.es/web-chat";
 </div>
 
 <div id="chat-widget" class="fixed bottom-6 right-6 z-50">
-	<!-- CODEX IA Label -->
-	<span id="chat-label" class="text-xs font-semibold text-[#25D366] bg-transparent px-2 py-1 rounded-full cursor-pointer hover:opacity-80 transition-opacity">Mía</span>
+	<!-- Mía Label -->
+	<span id="chat-label" class="text-sm font-semibold text-[#25D366] bg-transparent px-2 py-1 rounded-full cursor-pointer hover:opacity-80 transition-opacity">Mía</span>
 
 	<!-- Chat Button -->
 	<button
@@ -315,7 +315,7 @@ const CODEX_API = "https://wa.masmoebel.es/web-chat";
 			}
 		} catch (err) {
 			console.error('[CODEX] Error:', err);
-			showToast('Error de conexión con CODEX');
+			showToast('Error de conexión. Vuelve a intentarlo.');
 			addMessage('Lo siento, no pude conectar con el asistente. Inténtalo de nuevo.');
 		} finally {
 			setLoading(false);
