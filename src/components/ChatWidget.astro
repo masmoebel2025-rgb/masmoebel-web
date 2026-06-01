@@ -206,6 +206,32 @@ const CODEX_API = "https://wa.masmoebel.es/web-chat";
 		scrollToBottom();
 	}
 
+	function addActionButtons(buttons) {
+		const wrapper = document.createElement('div');
+		wrapper.className = 'flex items-start gap-2 mb-4';
+		const spacer = document.createElement('div');
+		spacer.className = 'w-8 h-8 flex-shrink-0';
+		const box = document.createElement('div');
+		box.className = 'flex flex-col gap-2 max-w-[85%]';
+		buttons.forEach(btn => {
+			const b = document.createElement('button');
+			b.className = 'px-4 py-2 rounded-lg text-sm font-medium shadow-sm transition ' +
+				(btn.estilo === 'rechazar'
+					? 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+					: 'bg-[#25D366] text-white hover:bg-[#1da851]');
+			b.textContent = btn.label;
+			b.onclick = () => {
+				box.querySelectorAll('button').forEach(x => { x.disabled = true; x.classList.add('opacity-50'); });
+				sendToCodex('', null, btn.action);
+			};
+			box.appendChild(b);
+		});
+		wrapper.appendChild(spacer);
+		wrapper.appendChild(box);
+		chatMessages.appendChild(wrapper);
+		scrollToBottom();
+	}
+
 	function addImageMessage(imgUrl, isUser = false, caption = '') {
 		const wrapper = document.createElement('div');
 		wrapper.className = 'flex items-start gap-2 mb-4' + (isUser ? ' flex-row-reverse' : '');
@@ -280,7 +306,7 @@ const CODEX_API = "https://wa.masmoebel.es/web-chat";
 		document.body.style.overflow = '';
 	}
 
-	async function sendToCodex(message, file = null) {
+	async function sendToCodex(message, file = null, action = null) {
 		setLoading(true);
 		chatStatus.textContent = 'Escribiendo...';
 
@@ -303,7 +329,7 @@ const CODEX_API = "https://wa.masmoebel.es/web-chat";
 				const response = await fetch(CODEX_API, {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify({ message, session_id: sessionId })
+					body: JSON.stringify({ message, session_id: sessionId, action: action || null })
 				});
 				if (!response.ok) throw new Error('HTTP ' + response.status);
 				data = await response.json();
@@ -313,6 +339,9 @@ const CODEX_API = "https://wa.masmoebel.es/web-chat";
 				data.images.forEach(imgUrl => {
 					addImageMessage(imgUrl);
 				});
+			}
+			if (data.buttons && data.buttons.length > 0) {
+				addActionButtons(data.buttons);
 			}
 		} catch (err) {
 			console.error('[CODEX] Error:', err);
