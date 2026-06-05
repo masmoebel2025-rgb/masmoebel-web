@@ -1,0 +1,4 @@
+remotion/node_modules/
+_props.json
+__pycache__/
+*.pyc

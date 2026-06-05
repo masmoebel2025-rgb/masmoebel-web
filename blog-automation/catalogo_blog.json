@@ -1,0 +1,203 @@
+{
+  "marca": {
+    "nombre": "Masmoebel",
+    "zona": "Bonares (Huelva)",
+    "ambito": "Huelva y provincia",
+    "que_hacemos": "Cocinas a medida: diseno, fabricacion e instalacion",
+    "asistente_virtual": "Mia",
+    "asistente_descripcion": "Mia es la asistente virtual de Masmoebel: atiende por WhatsApp y por la web, prepara presupuestos a partir del plano y agenda visitas.",
+    "tono": "Cercano y profesional, trato de usted, sin prometer precios ni plazos concretos",
+    "web": "masmoebel.es"
+  },
+  "series": [
+    {
+      "nombre": "Gloss",
+      "caracteristica": "Frentes en acabado brillo",
+      "acabados": [
+        "ALUMINIO",
+        "DOVE",
+        "GLS BLANCO",
+        "HUESO",
+        "MARENGO",
+        "PERLA",
+        "PLUMICE GREY",
+        "SEA",
+        "WHITE"
+      ],
+      "n_acabados": 9
+    },
+    {
+      "nombre": "Matt",
+      "caracteristica": "Frentes en acabado mate liso",
+      "acabados": [
+        "1410 LC",
+        "ALPINE WHITE",
+        "BLP 805 SOFT"
+      ],
+      "n_acabados": 3
+    },
+    {
+      "nombre": "Adira",
+      "caracteristica": "Frentes mate con amplia gama de color",
+      "acabados": [
+        "AGUAMARINA URBAN",
+        "BLANCO FINLANDIA",
+        "CACAO",
+        "CAFE LATTE",
+        "CAPUCHINO",
+        "CENIZA",
+        "COCO",
+        "GRIS OSCURO",
+        "NEGRO MADAGASCAR",
+        "SAHARA",
+        "VERDE LIQUEN",
+        "VERDE OLIVA"
+      ],
+      "n_acabados": 12
+    },
+    {
+      "nombre": "Universo",
+      "caracteristica": "Frentes mate en tonos neutros",
+      "acabados": [
+        "UNIVERSO BLANCO",
+        "UNIVERSO BLEEN",
+        "UNIVERSO GRIS NUBE",
+        "UNIVERSO LATTE",
+        "UNIVERSO MISTYC",
+        "UNIVERSO MOUSE",
+        "UNIVERSO TAUPE"
+      ],
+      "n_acabados": 7
+    },
+    {
+      "nombre": "Real",
+      "caracteristica": "Frentes efecto madera (robles y maderas naturales)",
+      "acabados": [
+        "BELES SAMARI",
+        "DIANA VENZA",
+        "DINDER SAMARI",
+        "JUNO VENZA",
+        "KAMET LAVITO",
+        "MEDIEVAL MEDIO",
+        "MINERVA VENZA",
+        "NUTSE LAVITO",
+        "REAL NORDIC",
+        "REAL ONTARIO",
+        "REAL TABACO",
+        "ROBLE ANETO",
+        "ROBLE AURORA",
+        "ROBLE AVELLANA",
+        "ROBLE CASELLA BLANCO",
+        "ROBLE CASELLA NATURAL",
+        "ROBLE TOSTADO",
+        "TRICH LAVITO",
+        "VESTA VENZA"
+      ],
+      "n_acabados": 19
+    },
+    {
+      "nombre": "Stone",
+      "caracteristica": "Frentes efecto piedra y marmol",
+      "acabados": [
+        "ESTATUARIO BIANCO",
+        "ESTATUARIO MARRONE",
+        "STONE BLANCO",
+        "STONE CARRARA",
+        "STONE MILAN",
+        "STONE MONACO",
+        "STONE RIBEA"
+      ],
+      "n_acabados": 7
+    },
+    {
+      "nombre": "Fenix",
+      "caracteristica": "Frentes en Fenix NTM: superficie supermate, antihuellas y termorreparable",
+      "acabados": [
+        "FENIX AZURRO NAXOS",
+        "FENIX BEIGE ARIZONA",
+        "FENIX BEIGE LUXOR",
+        "FENIX BLANCO ALASKA",
+        "FENIX BLU FES",
+        "FENIX CASTORO OTTAWA",
+        "FENIX GIALLO",
+        "FENIX GRIGIO ANTRIM",
+        "FENIX GRIGIO ZANTE",
+        "FENIX GRIS BROMO",
+        "FENIX NERO INGO",
+        "FENIX VERDE COMODORO"
+      ],
+      "n_acabados": 12
+    },
+    {
+      "nombre": "FingerPull",
+      "caracteristica": "Diseno gola / sin tirador (apertura por uneros)",
+      "acabados": [
+        "Agave",
+        "Agua Marina",
+        "Almagra",
+        "Amarillo Albero",
+        "Amarillo Mantequilla",
+        "Antracita",
+        "Arena",
+        "Azul Indigo",
+        "Azul Marino",
+        "Azul Ultramar",
+        "Basalto",
+        "Blanco",
+        "Blanco Polar",
+        "Camel",
+        "Cameo",
+        "Cashmere",
+        "Coral",
+        "Cotto",
+        "Dusty Rose",
+        "Espresso",
+        "Ginger",
+        "Gris Nube",
+        "Gris Perla",
+        "Gris Plomo",
+        "Gris-2",
+        "Ice Blue",
+        "Lavender",
+        "Macchiato",
+        "Magnolia",
+        "Midnight Purple",
+        "Naranja Citrus",
+        "Negro",
+        "Rojo Pompei",
+        "Taupe",
+        "Tortora",
+        "Urban Grey",
+        "Verde Matcha",
+        "Verde Salvia"
+      ],
+      "n_acabados": 38
+    }
+  ],
+  "total_acabados": 107,
+  "encimeras": {
+    "material": "Encimeras porcelanicas Ascale",
+    "acabados": [
+      "mate",
+      "pulido"
+    ],
+    "grosores_mm": [
+      12,
+      20
+    ]
+  },
+  "tipos_modulo": [
+    "bajo",
+    "alto",
+    "bajo-fregadero",
+    "bajo-rincon",
+    "altillo",
+    "columna",
+    "semicolumna",
+    "sobre-encimera",
+    "bajo-horno",
+    "alto-rincon",
+    "mueble-suelto"
+  ],
+  "_instrucciones_para_la_IA": "Usa UNICAMENTE estos datos reales. NO inventes series, acabados, materiales ni caracteristicas. NO menciones precios ni plazos. Marca: Masmoebel (Bonares, Huelva). Cita a la asistente Mia cuando encaje."
+}
