@@ -27,8 +27,9 @@ export const onRequest = defineMiddleware(async (_context, next) => {
     'Strict-Transport-Security',
     'max-age=31536000; includeSubDomains'
   );
-  // FASE Report-Only: reporta violaciones SIN bloquear. Cambiar a
-  // 'Content-Security-Policy' para hacerlo efectivo tras validar cero violaciones.
-  response.headers.set('Content-Security-Policy-Report-Only', CSP);
+  // CSP efectivo (validado con cero violaciones en Report-Only el 2026-06-05,
+  // incluido el chat con envío real). Para diagnosticar cambios futuros, volver
+  // temporalmente a 'Content-Security-Policy-Report-Only'.
+  response.headers.set('Content-Security-Policy', CSP);
   return response;
 });
