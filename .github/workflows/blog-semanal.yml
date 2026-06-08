@@ -36,6 +36,15 @@ jobs:
       - name: Instalar dependencias Python
         run: pip install anthropic
 
+      - name: Refrescar catálogo del servidor (siempre el último)
+        run: |
+          if curl -fsS "https://wa.masmoebel.es/images/catalogo_blog.json" -o blog-automation/catalogo_blog.json; then
+            echo "Catálogo refrescado desde el servidor."
+          else
+            echo "AVISO: servidor no disponible; uso el catálogo versionado en el repo."
+          fi
+          python -c "import json; json.load(open('blog-automation/catalogo_blog.json')); print('catalogo JSON valido')"
+
       - name: Generar articulo (Claude, solo datos reales)
         id: gen
         env:
