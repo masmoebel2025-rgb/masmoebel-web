@@ -353,11 +353,33 @@ const CODEX_API = "https://wa.masmoebel.es/web-chat";
 		}
 	}
 
+	// Puente web: polling de presupuestos aprobados (entrega en caliente mientras el chat esta abierto)
+	let pollTimer = null;
+	async function pollPendientes() {
+		try {
+			const r = await fetch(`${CODEX_API}/pendientes?session_id=${encodeURIComponent(sessionId)}`);
+			if (!r.ok) return;
+			const data = await r.json();
+			if (data && data.response) addMessage(data.response);
+			if (data && Array.isArray(data.images)) data.images.forEach((u) => addImageMessage(u));
+		} catch (e) {
+			/* silencioso: el polling no debe molestar al usuario */
+		}
+	}
+
 	chatBtn?.addEventListener('click', () => {
 		chatWindow?.classList.toggle('hidden');
 		chatIconOpen?.classList.toggle('hidden');
 		chatIconClose?.classList.toggle('hidden');
 		chatLabel?.classList.toggle('hidden');
+		const abierto = chatWindow && !chatWindow.classList.contains('hidden');
+		if (abierto) {
+			pollPendientes();
+			if (!pollTimer) pollTimer = setInterval(pollPendientes, 10000);
+		} else if (pollTimer) {
+			clearInterval(pollTimer);
+			pollTimer = null;
+		}
 	});
 
 	function handleSend() {
