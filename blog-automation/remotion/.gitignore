@@ -1,0 +1,5 @@
+# Renders locales (se regeneran con npx remotion render)
+out/
+# Clip de fondo pesado (20MB): se regenera con fal.ai (Seedance);
+# copia fuente en el VPS: /root/mia_promo/mia_video.mp4
+public/mia_video.mp4
