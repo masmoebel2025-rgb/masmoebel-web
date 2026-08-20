@@ -1,4 +1,10 @@
 import { defineMiddleware } from 'astro:middleware';
+import {
+  pideMarkdown,
+  esPaginaHtml,
+  htmlAMarkdown,
+  tokensAproximados,
+} from './lib/markdown-agentes';
 
 // CSP construido desde el inventario real de recursos (Google Fonts, GTM/Analytics,
 // Google Maps embed, chat wa.masmoebel.es). 'unsafe-inline' es necesario por los
@@ -17,7 +23,7 @@ const CSP = [
   "frame-src https://www.google.com",
 ].join('; ');
 
-export const onRequest = defineMiddleware(async (_context, next) => {
+export const onRequest = defineMiddleware(async (context, next) => {
   const response = await next();
   response.headers.set('X-Frame-Options', 'SAMEORIGIN');
   response.headers.set('X-Content-Type-Options', 'nosniff');
@@ -31,5 +37,19 @@ export const onRequest = defineMiddleware(async (_context, next) => {
   // incluido el chat con envío real). Para diagnosticar cambios futuros, volver
   // temporalmente a 'Content-Security-Policy-Report-Only'.
   response.headers.set('Content-Security-Policy', CSP);
-  return response;
+  // La respuesta cambia segun lo que pida el cliente: que las caches no mezclen
+  // la version HTML con la version markdown.
+  response.headers.append('Vary', 'Accept');
+
+  const esGetCorrecto = context.request.method === 'GET' && response.status === 200;
+  if (!esGetCorrecto || !pideMarkdown(context.request) || !esPaginaHtml(response)) {
+    return response;
+  }
+
+  const markdown = htmlAMarkdown(await response.text());
+  const cabeceras = new Headers(response.headers);
+  cabeceras.set('Content-Type', 'text/markdown; charset=utf-8');
+  cabeceras.set('x-markdown-tokens', String(tokensAproximados(markdown)));
+  cabeceras.delete('content-length');
+  return new Response(markdown, { status: response.status, headers: cabeceras });
 });
