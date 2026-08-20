@@ -1,4 +1,32 @@
 User-agent: *
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+Allow: /
+
+# Rastreadores de IA: se les deja entrar a proposito.
+# Content-Signal (contentsignals.org): que NO entrenen modelos con esto,
+# pero que SI podamos salir en busquedas y en respuestas de asistentes.
+User-agent: GPTBot
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+Allow: /
+
+User-agent: OAI-SearchBot
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+Allow: /
+
+User-agent: ChatGPT-User
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+Allow: /
+
+User-agent: ClaudeBot
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+Allow: /
+
+User-agent: PerplexityBot
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+Allow: /
+
+User-agent: Google-Extended
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 Allow: /
 
 Sitemap: https://masmoebel.es/sitemap-index.xml
