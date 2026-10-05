@@ -25,5 +25,22 @@ const { Content } = await render(post);
   imageAlt={post.data.imageAlt}
   tags={post.data.tags}
 >
+  {post.data.youtube && (
+    <div
+      class="not-prose mx-auto mb-8 overflow-hidden rounded-lg shadow-lg"
+      style={post.data.youtubeVertical
+        ? 'max-width:360px;aspect-ratio:9/16'
+        : 'max-width:100%;aspect-ratio:16/9'}
+    >
+      <iframe
+        src={`https://www.youtube-nocookie.com/embed/${post.data.youtube}?rel=0`}
+        title={post.data.title}
+        loading="lazy"
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="width:100%;height:100%;border:0"
+      ></iframe>
+    </div>
+  )}
   <Content />
 </BlogPost>
