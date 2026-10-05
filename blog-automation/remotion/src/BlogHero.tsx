@@ -1,16 +1,18 @@
 import { AbsoluteFill } from "remotion";
 
 // Portada de blog 1200x630 — plantilla FIJA de marca; variable = title + serie + acabado.
+// 05/10/2026: `etiqueta` opcional para los artículos de vídeo («VÍDEO»); sin ella, «SERIE» como siempre.
 export interface BlogHeroProps {
   title: string;
   serie: string;
   acabado: string;
+  etiqueta?: string;
 }
 
 const DARK = "#1A1A1A";
 const GOLD = "#D4AF37";
 
-export const BlogHero: React.FC<BlogHeroProps> = ({ title, serie, acabado }) => {
+export const BlogHero: React.FC<BlogHeroProps> = ({ title, serie, acabado, etiqueta = "SERIE" }) => {
   return (
     <AbsoluteFill style={{ background: `linear-gradient(135deg, #262626 0%, ${DARK} 55%, #0d0d0d 100%)`, padding: 80, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
       {/* Marca arriba */}
@@ -30,7 +32,7 @@ export const BlogHero: React.FC<BlogHeroProps> = ({ title, serie, acabado }) => 
       {/* Pie: serie/acabado real (variable) + web */}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <div style={{ display: "inline-flex", alignItems: "center", gap: 14, padding: "14px 26px", border: `1.5px solid ${GOLD}`, borderRadius: 50 }}>
-          <span style={{ fontSize: 19, color: "rgba(255,255,255,0.6)", letterSpacing: "2px" }}>SERIE</span>
+          <span style={{ fontSize: 19, color: "rgba(255,255,255,0.6)", letterSpacing: "2px" }}>{etiqueta}</span>
           <span style={{ fontFamily: "Georgia, serif", fontSize: 26, color: "#fff" }}>{serie}</span>
           <span style={{ color: GOLD, fontSize: 22 }}>·</span>
           <span style={{ fontSize: 24, color: GOLD }}>{acabado}</span>
