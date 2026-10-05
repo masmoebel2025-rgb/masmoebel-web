@@ -1,0 +1,176 @@
+{
+ "_leeme": "Videos de YouTube (@Masmoebel) que Mia puede convertir en articulo del blog. Solo se usan los que ya estan publicados (publica <= ahora) y tienen youtube. Uno por articulo; el que ya tiene articulo no se repite. 05/10/2026.",
+ "videos": [
+  {
+   "clave": "mia_pelicula",
+   "tipo": "mia",
+   "youtube": "bjeOg5XGVf0",
+   "vertical": false,
+   "publica": "2026-10-05T13:00:00+02:00",
+   "titulo_video": "Un día con Mía: la empleada digital que lleva la oficina",
+   "texto": "Un día cualquiera en un negocio cualquiera. Mía ayuda al vendedor con los presupuestos, al contable con las facturas, a quien coge el teléfono con los mensajes… y antes de tocar nada importante, pregunta. Tú decides; tú tienes el control, siempre.\n\nMía es el sistema que lleva la administración de una empresa casi sola: lee las facturas, las contabiliza, cuadra el banco, deja al día los impuestos, atiende el WhatsApp y sigue los presupuestos. Lleva meses funcionando cada día en nuestra propia empresa.\n\n¿Quieres verla en tu negocio? https://masmoebel.es · WhatsApp 623 22 96 53\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA."
+  },
+  {
+   "clave": "planobras_17",
+   "tipo": "planobras",
+   "youtube": "ozcQt0-g1-g",
+   "vertical": true,
+   "publica": "2026-10-04T14:00:00+02:00",
+   "titulo_video": "",
+   "texto": "¿Plantas con entrantes y quiebros? Dibújala con el dedo.\n\nUna planta de obra de verdad: doce paredes, de un solo trazo con el dedo. Entrantes, salientes y rincones: la app los saca todos, de la A a la L. Las medidas del dibujo son orientativas; las reales se ponen después.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_01",
+   "tipo": "planobras",
+   "youtube": "REcBUQHYfXY",
+   "vertical": true,
+   "publica": "2026-10-05T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "¿Montas cocinas o baños? El plano, sin pasarlo a limpio.\n\nEsta cocina la medí en obra. Nuevo proyecto, cuatro paredes. Las paredes y sus cuatro rincones. Las medidas van directas al plano. Agua y enchufes, cada toma con su altura. Nada se queda en la libreta. Y el plano sale en PDF, listo para entregar. Sin pasarlo a limpio. Sin volver a la obra.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_16",
+   "tipo": "planobras",
+   "youtube": "m_BHnAL-2CI",
+   "vertical": true,
+   "publica": "2026-10-06T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "¿Lineal, en L o en U?\n\nUna cocina lineal: pones el largo de la pared y ya está en el plano. En L: dos paredes a escuadra, cada una con su largo. Y en U: tres paredes, tres medidas, y la planta hecha.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_03",
+   "tipo": "planobras",
+   "youtube": "J54apzwz0qM",
+   "vertical": true,
+   "publica": "2026-10-07T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "Cada enchufe, en su sitio y a su altura.\n\nCada pared tiene su alzado, con las alturas de siempre ya marcadas. Cada toma, con su distancia a la esquina y su altura desde el suelo. Agua, desagüe y enchufes, pared por pared. Nada se queda en la libreta.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "mia_whatsapp",
+   "tipo": "mia",
+   "youtube": "5EM89HkVJ74",
+   "vertical": true,
+   "publica": "2026-10-07T13:00:00+02:00",
+   "titulo_video": "Presupuesto y cita de cocina en un minuto, por WhatsApp",
+   "texto": "Escribes a Mía por WhatsApp, le dices la cocina que quieres y te prepara el presupuesto al momento. Si te encaja, te da cita para la visita técnica gratuita. A cualquier hora.\n\nMía es la asistente con inteligencia artificial de Masmoebel: atiende el WhatsApp, prepara presupuestos y lleva la administración de la empresa."
+  },
+  {
+   "clave": "planobras_04",
+   "tipo": "planobras",
+   "youtube": "-R2IfhBzIhg",
+   "vertical": true,
+   "publica": "2026-10-08T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "La puerta y la ventana, medidas antes del mueble.\n\nLa ventana, con su ancho, su alto y su altura desde el suelo. El cerramiento acristalado, también en su pared. Y la puerta, con su ancho y hacia dónde abre. En la planta se ve por dónde se entra y hacia dónde abre.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_05",
+   "tipo": "planobras",
+   "youtube": "EPUPnctAZuk",
+   "vertical": true,
+   "publica": "2026-10-09T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "¿Un pilar en el rincón?\n\nEl pilar, en su rincón del plano. Lo que ocupa en cada pared, y si es redondo o cuadrado. Y se ve también en tres dimensiones.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_10",
+   "tipo": "planobras",
+   "youtube": "",
+   "vertical": true,
+   "publica": "2026-10-15T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "La cocina medida, en tres dimensiones.\n\nLo que has medido, en tres dimensiones. La giras con el dedo y la ves por todos lados.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_11",
+   "tipo": "planobras",
+   "youtube": "",
+   "vertical": true,
+   "publica": "2026-10-17T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "Que te avise antes de que lo vea el cliente.\n\nAntes de entregar, la app repasa la medición y avisa de lo que no cuadra. Una toma detrás de la encimera, o un panel que quedaría tapado.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_12",
+   "tipo": "planobras",
+   "youtube": "",
+   "vertical": true,
+   "publica": "2026-10-16T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "Un PDF para cada uno.\n\nDesde el menú sacas un PDF para cada uno. El informe completo: el plano y cada pared con su tabla. Uno para el electricista. Otro para el fontanero. Y uno para el cliente, que se envía desde la misma pantalla.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_13",
+   "tipo": "planobras",
+   "youtube": "",
+   "vertical": true,
+   "publica": "2026-10-18T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "De la obra a tu programa de diseño.\n\nDesde el navegador, la medición sale a DXF, a IFC, en tres dimensiones o en tabla. Y con Exportar todo, te llevas todas tus mediciones de una vez.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_14",
+   "tipo": "planobras",
+   "youtube": "",
+   "vertical": true,
+   "publica": "2026-10-19T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "Milímetros o pulgadas, como trabajes tú.\n\nEn los ajustes eliges milímetros o pulgadas. Si quieres, los grados de cada pared en el plano. Y tus juegos de cotas de oficio, los de serie y los tuyos.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_15",
+   "tipo": "planobras",
+   "youtube": "",
+   "vertical": true,
+   "publica": "2026-10-20T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "¿Cuánto hay entre dos puntos?\n\nCon la cinta, dos toques y tienes la distancia entre dos puntos. Y la medida se queda dibujada en la pared.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_08",
+   "tipo": "planobras",
+   "youtube": "",
+   "vertical": true,
+   "publica": "2026-10-10T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "¿Una pared curva? También se mide.\n\nUna pared curva, con su cuerda y su flecha. Y su largo de verdad, medido por la curva. La esquina redondeada, con el punto donde empieza la curva.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_06",
+   "tipo": "planobras",
+   "youtube": "",
+   "vertical": true,
+   "publica": "2026-10-11T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "Lo que baja del techo, también medido.\n\nLos forjados de techo y de suelo, pared por pared, con su ancho y lo que cuelgan. En el alzado se ve lo que baja del techo. Y en tres dimensiones, cada uno en su sitio.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_07",
+   "tipo": "planobras",
+   "youtube": "",
+   "vertical": true,
+   "publica": "2026-10-12T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "¿El techo no es plano?\n\nEl techo, con su altura. Esta cocina lo tiene plano. Si es inclinado, a dos aguas o abovedado, eliges su forma y metes sus medidas.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_02",
+   "tipo": "planobras",
+   "youtube": "",
+   "vertical": true,
+   "publica": "2026-10-13T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "¿Y si el rincón no es de noventa grados?\n\nEn el plano, cada rincón lleva sus grados. Para medirlo, marcas un metro en cada pared desde la esquina y mides entre las dos marcas. Y si un rincón está torcido por poco, lo pones recto con un toque.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  },
+  {
+   "clave": "planobras_09",
+   "tipo": "planobras",
+   "youtube": "",
+   "vertical": true,
+   "publica": "2026-10-14T19:00:00+02:00",
+   "titulo_video": "",
+   "texto": "Tus alturas de mueble, ya puestas.\n\nCada cocina con su juego de alturas: patas, bajo, columna y encimera. Y las líneas salen en cada pared: zócalo, encimera, bajo del alto y columna.\n\nPlanobras es la app para medir cocinas y baños en obra: dibujas la planta con el dedo, apuntas tomas, pilares y techos, y sale el plano en PDF al momento. Mejor en tablet, también en el móvil.\n\nPruébala gratis una semana, totalmente funcional: https://play.google.com/store/apps/details?id=es.planobras.prueba\n\nHecha por Masmoebel (Bonares, Huelva): cocinas a medida y apps con IA. https://masmoebel.es"
+  }
+ ]
+}
