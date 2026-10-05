@@ -51,10 +51,26 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           set -euo pipefail
-          python blog-automation/generar_articulo_blog.py \
-            blog-automation/catalogo_blog.json \
-            src/content/blog \
+          # 05/10/2026: un martes de video y otro de catalogo. El de video sale con 3 si hoy no toca.
+          set +e
+          python blog-automation/generar_articulo_video.py \
+            blog-automation/videos_blog.json \
+            blog-automation/hechos_planobras.md \
             src/content/blog > blog-automation/_props.json
+          rc=$?
+          set -e
+          if [ "$rc" = "3" ]; then
+            echo "Hoy toca articulo de catalogo."
+            python blog-automation/generar_articulo_blog.py \
+              blog-automation/catalogo_blog.json \
+              src/content/blog \
+              src/content/blog > blog-automation/_props.json
+          elif [ "$rc" != "0" ]; then
+            echo "::error::El articulo de video ha fallado (codigo $rc)."
+            exit "$rc"
+          else
+            echo "Hoy toca articulo de video."
+          fi
           echo "Props generadas:"; cat blog-automation/_props.json
           # Si Claude invento serie/acabado o coló un precio -> abortar (no publicar basura)
           if [ "$(jq '._warnings | length' blog-automation/_props.json)" != "0" ]; then
