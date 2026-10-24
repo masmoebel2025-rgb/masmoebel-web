@@ -9,7 +9,7 @@
 - [Blog](https://masmoebel.es/blog): artículos sobre cocinas.
 
 ## App Oficios
-- [Oficios](https://masmoebel.es/oficios/): app Android para autónomos de oficios en España (fontanería, electricidad, carpintería, climatización, albañilería, pintura y cualquier otro oficio). Dictas el trabajo y sale el presupuesto con tus precios; al terminar, la factura. Lo manda por correo o por WhatsApp, envía facturas y gastos a tu gestoría y te dice con la voz cuánto vas a pagar de IVA e IRPF. Funciona sin cobertura. Un mes gratis; después 29 €/mes o 290 €/año, IVA incluido.
+- [Oficios](https://oficios.masmoebel.es/): app Android para autónomos de oficios en España (fontanería, electricidad, carpintería, climatización, albañilería, pintura y cualquier otro oficio). Dictas el trabajo y sale el presupuesto con tus precios; al terminar, la factura. Lo manda por correo o por WhatsApp, envía facturas y gastos a tu gestoría y te dice con la voz cuánto vas a pagar de IVA e IRPF. Funciona sin cobertura. Un mes gratis; después 29 €/mes o 290 €/año, IVA incluido.
 - [Oficios en Google Play](https://play.google.com/store/apps/details?id=es.masmoebel.oficios)
 
 ## Otros productos
