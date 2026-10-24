@@ -90,27 +90,28 @@
 <style is:global>
 /* Layout: una columna tranquila; arriba la frase y un presupuesto de ejemplo como si fuera la libreta del oficio */
 :root {
-  --papel: #f5f6f2;
+  /* Colores de Masmöbel: el naranja de masmoebel.es (orange-600/700) sobre grises cálidos */
+  --papel: #fafaf9;
   --hoja: #ffffff;
-  --tinta: #1f2a36;
-  --tinta-suave: #5a6672;
-  --linea: #dfe2da;
-  --cinta: #f0b81c;
-  --cinta-tinta: #2a2100;
-  --azul: #1f5f8b;
+  --tinta: #1c1917;
+  --tinta-suave: #57534e;
+  --linea: #e7e5e4;
+  --cinta: #ea580c;
+  --cinta-tinta: #ffffff;
+  --azul: #c2410c;
   --f-titular: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --f-texto: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
   --f-cifra: "JetBrains Mono", ui-monospace, "Consolas", monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --papel: #161b20; --hoja: #1e252c; --tinta: #e8ebe6; --tinta-suave: #a3adb6; --linea: #2f3943;
-    --cinta: #f2c23a; --cinta-tinta: #2a2100; --azul: #7fb6dc; color-scheme: dark;
+    --papel: #1c1917; --hoja: #292524; --tinta: #f5f5f4; --tinta-suave: #a8a29e; --linea: #44403c;
+    --cinta: #f97316; --cinta-tinta: #1c1917; --azul: #fb923c; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --papel: #161b20; --hoja: #1e252c; --tinta: #e8ebe6; --tinta-suave: #a3adb6; --linea: #2f3943;
-  --cinta: #f2c23a; --cinta-tinta: #2a2100; --azul: #7fb6dc; color-scheme: dark;
+  --papel: #1c1917; --hoja: #292524; --tinta: #f5f5f4; --tinta-suave: #a8a29e; --linea: #44403c;
+  --cinta: #f97316; --cinta-tinta: #1c1917; --azul: #fb923c; color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -141,16 +142,16 @@ a:focus-visible, .boton:focus-visible, summary:focus-visible { outline: 3px soli
 .portada > * { min-width: 0; }
 .etiqueta { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-suave); margin-bottom: 14px; }
 h1 { font-size: clamp(36px, 6vw, 58px); font-weight: 800; letter-spacing: -0.01em; }
-h1 mark { background: linear-gradient(transparent 58%, var(--cinta) 58%); color: inherit; padding: 0 2px; }
+h1 mark { background: linear-gradient(transparent 58%, color-mix(in srgb, var(--cinta) 35%, transparent) 58%); color: inherit; padding: 0 2px; }
 .entradilla { margin-top: 18px; font-size: 19px; color: var(--tinta-suave); max-width: 34em; }
 .acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; margin-top: 28px; }
-.boton { display: inline-flex; align-items: center; gap: 10px; background: var(--tinta); color: var(--papel); text-decoration: none; font-weight: 700; padding: 14px 22px; border-radius: 10px; transition: transform .15s ease; }
+.boton { display: inline-flex; align-items: center; gap: 10px; background: var(--azul); color: var(--cinta-tinta); text-decoration: none; font-weight: 700; padding: 14px 22px; border-radius: 10px; transition: transform .15s ease; }
 .boton:hover { transform: translateY(-1px); }
 .boton svg { width: 20px; height: 20px; }
 .nota { font-size: 15px; color: var(--tinta-suave); }
 
 /* el presupuesto de ejemplo */
-.libreta { background: var(--hoja); border: 1px solid var(--linea); border-radius: 14px; padding: 22px 22px 18px; box-shadow: 0 18px 40px -24px rgba(20, 30, 40, .35); }
+.libreta { background: var(--hoja); border: 1px solid var(--linea); border-radius: 14px; padding: 22px 22px 18px; box-shadow: 0 18px 40px -24px rgba(28, 25, 23, .35); }
 .dicho { display: flex; gap: 12px; align-items: flex-start; background: var(--papel); border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
 .dicho svg { flex: none; width: 22px; height: 22px; margin-top: 2px; color: var(--azul); }
 .dicho q { font-style: italic; }
