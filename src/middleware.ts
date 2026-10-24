@@ -5,6 +5,7 @@ import {
   htmlAMarkdown,
   tokensAproximados,
 } from './lib/markdown-agentes';
+import { destinoOficios } from './lib/oficios-host';
 
 // CSP construido desde el inventario real de recursos (Google Fonts, GTM/Analytics,
 // Google Maps embed, chat wa.masmoebel.es). 'unsafe-inline' es necesario por los
@@ -24,7 +25,9 @@ const CSP = [
 ].join('; ');
 
 export const onRequest = defineMiddleware(async (context, next) => {
-  const response = await next();
+  const destino = destinoOficios(context.url.host, context.url.pathname, context.url.search);
+  if (destino?.tipo === 'redirigir') return context.redirect(destino.url, 301);
+  const response = await (destino?.tipo === 'reescribir' ? next(destino.ruta) : next());
   response.headers.set('X-Frame-Options', 'SAMEORIGIN');
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
