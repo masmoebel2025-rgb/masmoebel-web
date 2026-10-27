@@ -149,6 +149,9 @@ h1 mark { background: linear-gradient(transparent 58%, color-mix(in srgb, var(--
 .boton { display: inline-flex; align-items: center; gap: 10px; background: var(--azul); color: var(--cinta-tinta); text-decoration: none; font-weight: 700; padding: 14px 22px; border-radius: 10px; transition: transform .15s ease; }
 .boton:hover { transform: translateY(-1px); }
 .boton svg { width: 20px; height: 20px; }
+.boton--pronto { cursor: default; opacity: .75; }
+.boton--pronto:hover { transform: none; }
+.aviso { margin: 0 0 8px; padding: 12px 16px; border: 1px solid var(--cinta); border-radius: 10px; background: var(--hoja); color: var(--tinta); font-weight: 600; text-align: center; }
 .nota { font-size: 15px; color: var(--tinta-suave); }
 
 /* el presupuesto de ejemplo */
@@ -245,6 +248,8 @@ footer a { color: var(--tinta-suave); }
     </nav>
   </header>
 
+  <p class="aviso" role="status">Oficios está en revisión. Muy pronto podrás descargarla en Google Play.</p>
+
   <main id="inicio">
     <div class="portada">
       <div>
@@ -252,10 +257,10 @@ footer a { color: var(--tinta-suave); }
         <h1>Dilo en voz alta y <mark>el presupuesto se hace solo</mark></h1>
         <p class="entradilla">Oficios es una app para el móvil. Le cuentas el trabajo como se lo contarías a un compañero y te prepara el presupuesto con tus precios. Al terminar, la factura, y tu gestoría la recibe sola. Funciona aunque no tengas cobertura.</p>
         <div class="acciones">
-          <a class="boton" href="https://play.google.com/store/apps/details?id=es.masmoebel.oficios" rel="noopener">
+          <span class="boton boton--pronto" aria-disabled="true">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.6c-.3.3-.4.7-.4 1.2v16.4c0 .5.1.9.4 1.2l9.3-9.4-9.3-9.4Zm10.7 7.9 2.6-2.6L6.3 1.6c-.4-.2-.8-.2-1.1-.1l9.7 9Zm0 3-9.7 9c.3.1.7.1 1.1-.1l11.2-6.3-2.6-2.6Zm4-3.7-2.9 2.2 2.9 2.2 2.6-1.5c.8-.4.8-1.6 0-2.1l-2.6-.8Z"/></svg>
-            Descargar en Google Play
-          </a>
+            Próximamente en Google Play
+          </span>
           <span class="nota">Un mes gratis · sin tarjeta · Android</span>
         </div>
       </div>
@@ -411,10 +416,10 @@ footer a { color: var(--tinta-suave); }
 
     <section class="cierre" aria-labelledby="t-cierre">
       <h2 id="t-cierre">Haz tu próximo presupuesto hablando</h2>
-      <a class="boton" href="https://play.google.com/store/apps/details?id=es.masmoebel.oficios" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.6c-.3.3-.4.7-.4 1.2v16.4c0 .5.1.9.4 1.2l9.3-9.4-9.3-9.4Zm10.7 7.9 2.6-2.6L6.3 1.6c-.4-.2-.8-.2-1.1-.1l9.7 9Zm0 3-9.7 9c.3.1.7.1 1.1-.1l11.2-6.3-2.6-2.6Zm4-3.7-2.9 2.2 2.9 2.2 2.6-1.5c.8-.4.8-1.6 0-2.1l-2.6-.8Z"/></svg>
-        Descargar en Google Play
-      </a>
+      <span class="boton boton--pronto" aria-disabled="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.6c-.3.3-.4.7-.4 1.2v16.4c0 .5.1.9.4 1.2l9.3-9.4-9.3-9.4Zm10.7 7.9 2.6-2.6L6.3 1.6c-.4-.2-.8-.2-1.1-.1l9.7 9Zm0 3-9.7 9c.3.1.7.1 1.1-.1l11.2-6.3-2.6-2.6Zm4-3.7-2.9 2.2 2.9 2.2 2.6-1.5c.8-.4.8-1.6 0-2.1l-2.6-.8Z"/></svg>
+            Próximamente en Google Play
+          </span>
       <span class="nota">¿Dudas? Escríbenos a info@masmoebel.es</span>
     </section>
   </main>
