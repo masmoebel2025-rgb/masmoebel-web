@@ -89,7 +89,18 @@ const currentUrl = new URL(Astro.url.pathname, siteUrl);
 			],
 			"priceRange": "€€€",
 			"image": siteUrl + "/images/og-image.png",
-			"sameAs": []
+			// 28/10/2026: estaba vacío. Los perfiles reales de la casa y su fundador (LinkedIn).
+			"sameAs": [
+				"https://www.instagram.com/masmoebel2025/",
+				"https://www.facebook.com/profile.php?id=61589288835469",
+				"https://mia.masmoebel.es",
+				"https://planobras.es"
+			],
+			"founder": {
+				"@type": "Person",
+				"name": "Sebastián Domínguez García",
+				"sameAs": ["https://www.linkedin.com/in/sebastian-dominguez-garcia-masmoebel/"]
+			}
 		})} />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
