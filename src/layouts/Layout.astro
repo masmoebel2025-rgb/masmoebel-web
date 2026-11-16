@@ -38,6 +38,22 @@ const currentUrl = new URL(Astro.url.pathname, siteUrl);
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 			gtag('config', 'G-3F8R8VWPEH');
+			// 16/11/2026: contar los contactos (WhatsApp, teléfono, correo, formularios y el chat de Mía),
+			// para saber si una visita acaba en cliente. Un solo escuchador para toda la web.
+			document.addEventListener('click', function (e) {
+				var a = e.target.closest && e.target.closest('a[href], #chat-btn, #chat-label');
+				if (!a) return;
+				var href = a.getAttribute('href') || '';
+				var tipo = /wa\.me|whatsapp/i.test(href) ? 'contacto_whatsapp'
+					: /^tel:/i.test(href) ? 'contacto_telefono'
+					: /^mailto:/i.test(href) ? 'contacto_correo'
+					: (a.id === 'chat-btn' || a.id === 'chat-label') ? 'abrir_chat_mia' : '';
+				if (tipo) gtag('event', tipo, { pagina: location.pathname });
+			}, true);
+			document.addEventListener('submit', function (e) {
+				var f = e.target;
+				gtag('event', 'enviar_formulario', { formulario: f.getAttribute('name') || f.id || 'formulario', pagina: location.pathname });
+			}, true);
 		</script>
 
 		<!-- Open Graph -->
